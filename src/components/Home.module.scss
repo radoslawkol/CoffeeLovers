@@ -1,0 +1,11 @@
+.h1 {
+	color: "red";
+}
+.h1 {
+	color: blue;
+	font-size: 10rem;
+	// width: 100%;
+	&:hover {
+		color: aqua;
+	}
+}
