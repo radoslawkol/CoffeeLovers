@@ -2,6 +2,9 @@ $breakpoints: (
 	"small": (
 		min-width: 576px,
 	),
+	"large": (
+		min-width: 992px,
+	),
 );
 
 @mixin media-size($breakpoint) {
@@ -13,4 +16,16 @@ $breakpoints: (
 		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
 	}
+}
+
+@mixin backdrop-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(19, 18, 18, 0.233);
+	z-index: -1;
 }

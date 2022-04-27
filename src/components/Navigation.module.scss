@@ -12,6 +12,7 @@
 	flex-wrap: wrap;
 	padding: 1rem 2rem;
 	background-color: $black-color;
+	z-index: 100;
 
 	@include media-size("small") {
 		height: 5rem;
@@ -43,7 +44,7 @@
 		text-align: center;
 		width: 100%;
 		height: calc(100vh - 5rem);
-		margin: 15rem;
+		margin-top: 15rem;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
@@ -69,14 +70,31 @@
 	}
 
 	.link {
-		font-size: 1.8rem;
-		color: $white-color;
+		position: relative;
+		font-size: 1.6rem;
+		color: $dirty-white-color;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: color 0.3s ease-out;
 		&:hover,
 		&:focus {
-			color: $secondary-color;
+			color: $white-color;
+
+			&::after {
+				width: 100%;
+			}
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			background-color: $secondary-color;
+			height: 2px;
+			width: 0;
+			transition: width 0.3s;
 		}
 	}
 }

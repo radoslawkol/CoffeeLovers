@@ -1,3 +1,5 @@
+@import "./scss/mixins.module.scss";
+
 *,
 *::after,
 *::before {
@@ -8,6 +10,11 @@
 
 html {
 	font-size: 62.5%;
+
+	@include media-size("large") {
+		font-size: 87.5%;
+	}
+	scroll-behavior: smooth;
 }
 
 body {

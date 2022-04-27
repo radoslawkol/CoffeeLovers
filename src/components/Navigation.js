@@ -15,6 +15,8 @@ const Navigation = () => {
 	};
 
 	useEffect(() => {
+		if (window.innerWidth >= 576) return;
+
 		if (isOpen) {
 			document.body.style.overflow = "hidden";
 		} else {
