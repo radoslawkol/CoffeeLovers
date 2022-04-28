@@ -1,0 +1,10 @@
+@import "../scss/variables.module.scss";
+
+.section-heading {
+	padding: 1rem;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: 200;
+	color: $secondary-color;
+	text-transform: uppercase;
+}

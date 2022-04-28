@@ -3,10 +3,12 @@
 .btn {
 	padding: 0.5rem 1rem;
 	font-size: 1.2rem;
+	font-weight: 400;
 	color: $white-color;
 	border: 0;
-	border-radius: 15px;
+	border-radius: 100px;
 	text-decoration: none;
+	text-transform: uppercase;
 	transition: transform 0.3s;
 
 	cursor: pointer;

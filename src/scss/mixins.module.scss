@@ -5,6 +5,9 @@ $breakpoints: (
 	"large": (
 		min-width: 992px,
 	),
+	"extra-large": (
+		min-width: 1400px,
+	),
 );
 
 @mixin media-size($breakpoint) {
