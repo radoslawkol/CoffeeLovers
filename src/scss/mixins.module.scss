@@ -2,11 +2,17 @@ $breakpoints: (
 	"small": (
 		min-width: 576px,
 	),
+	"medium": (
+		min-width: 776px,
+	),
 	"large": (
 		min-width: 992px,
 	),
 	"extra-large": (
 		min-width: 1400px,
+	),
+	"big": (
+		min-width: 1600px,
 	),
 );
 

@@ -1,11 +1,11 @@
 import "./index.scss";
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Home from "./components/Home";
-import About from "./components/About";
-import Services from "./components/Services";
-import Gallery from "./components/Gallery";
-import Contact from "./components/Contact";
+import Navigation from "./components/layout/Navigation";
+import Home from "./components/pages/Home";
+import ServicesPage from "./components/pages/ServicesPage";
+import GalleryPage from "./components/pages/GalleryPage";
+import ContactPage from "./components/pages/ContactPage";
+import AboutPage from "./components/pages/AboutPage";
 
 function App() {
 	return (
@@ -13,10 +13,10 @@ function App() {
 			<Navigation />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/services' element={<Services />} />
-				<Route path='/gallery' element={<Gallery />} />
-				<Route path='/contact' element={<Contact />} />
+				<Route path='/about' element={<AboutPage />} />
+				<Route path='/services' element={<ServicesPage />} />
+				<Route path='/gallery' element={<GalleryPage />} />
+				<Route path='/contact' element={<ContactPage />} />
 			</Routes>
 		</>
 	);

@@ -1,7 +1,8 @@
-@import "../scss/variables.module.scss";
-@import "../scss/mixins.module.scss";
+@import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
 
 .About {
+	position: relative;
 	padding-top: 4rem;
 	background-color: #1c1a1a;
 
@@ -68,5 +69,9 @@
 		@include media-size("large") {
 			place-self: end center;
 		}
+	}
+	&__wave {
+		position: relative;
+		transform: translateY(1rem);
 	}
 }

@@ -1,6 +1,6 @@
 import classes from "./Navigation.module.scss";
 import { useEffect, useState } from "react";
-import logo from "../images/coffee-beans.png";
+import logo from "../../images/coffee-beans.png";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {} from "@fortawesome/free-regular-svg-icons";

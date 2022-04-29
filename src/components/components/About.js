@@ -1,10 +1,10 @@
 import classes from "./About.module.scss";
-import "../scss/typography.scss";
-import "../scss/button.scss";
-import photo1 from "../images/About-photo-1.jpg";
-import photo2 from "../images/About-photo-2.jpg";
-import photo3 from "../images/About-photo-3.jpg";
-import wave from "../images/wave.svg";
+import "../../scss/typography.scss";
+import "../../scss/button.scss";
+import photo1 from "../../images/About-photo-1.jpg";
+import photo2 from "../../images/About-photo-2.jpg";
+import photo3 from "../../images/About-photo-3.jpg";
+import wave from "../../images/wave.svg";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -51,9 +51,7 @@ const About = () => {
 					Read More
 				</Link>
 			</div>
-			<div>
-				<img src={wave} alt='Wave' />
-			</div>
+			<img src={wave} alt='Wave' className={classes["About__wave"]} />
 		</section>
 	);
 };

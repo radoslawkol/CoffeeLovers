@@ -1,12 +1,13 @@
-import "../scss/button.scss";
+import "../../scss/button.scss";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 import classes from "./Home.module.scss";
-import logo from "../images/coffee-beans.png";
-import About from "./About";
+import logo from "../../images/coffee-beans.png";
+import About from "../components/About";
 import TypewriterComponent from "typewriter-effect";
 import { Link } from "react-router-dom";
+import Testimonials from "../components/Testimonials";
 
 const isMobile = window.matchMedia("(max-width: 576px)").matches;
 
@@ -54,6 +55,7 @@ const Home = () => {
 				</header>
 				<main>
 					<About></About>
+					<Testimonials />
 				</main>
 			</>
 		);
@@ -99,6 +101,7 @@ const Home = () => {
 				</header>
 				<main>
 					<About></About>
+					<Testimonials />
 				</main>
 			</>
 		);

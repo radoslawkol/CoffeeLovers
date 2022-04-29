@@ -1,0 +1,41 @@
+@import "../../scss/variables.module.scss";
+
+.Testimonial {
+	position: relative;
+	width: 18rem;
+	height: 100%;
+	padding: 2rem;
+	background-color: $black-color;
+	border-radius: 10px;
+	flex-shrink: 0;
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	&__photo {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	&__name {
+		font-size: 1.4rem;
+		color: $dirty-white-color;
+	}
+	&__text {
+		margin: 1rem 0;
+		color: $dirty-white-color;
+	}
+	&__rating {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.icon {
+	color: white;
+}
