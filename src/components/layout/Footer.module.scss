@@ -1,0 +1,139 @@
+@import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
+
+.Footer {
+	padding: 4rem 4rem 0 4rem;
+	background-color: $primary-color;
+	@include media-size("small") {
+		padding: 4rem 8rem 0 8rem;
+	}
+	@include media-size("extra-large") {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		align-items: baseline;
+	}
+}
+
+.logoContainer {
+	margin: 2rem 0;
+	grid-column: span 3;
+	grid-row: 1/2;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.logoName {
+	font-size: 2.5rem;
+	font-weight: 400;
+	color: $white-color;
+	align-self: flex-end;
+}
+
+.logoImg {
+	width: 4rem;
+	height: 4rem;
+}
+
+.line {
+	height: 1px;
+	background-color: $secondary-color;
+}
+
+.info {
+	text-align: center;
+	// @include media-size("extra-large") {
+	// 	align-self: center;
+	// }
+}
+
+.text {
+	font-size: 1.4rem;
+	color: $dirty-white-color;
+	@include media-size("small") {
+		width: 60%;
+		margin: 0 auto;
+	}
+	@include media-size("extra-large") {
+		width: 80%;
+	}
+}
+
+.btn {
+	display: inline-block;
+	margin: 2rem 0;
+}
+
+h3 {
+	margin: 2rem 0;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: $white-color;
+}
+
+.socialsContainer {
+	margin: 3rem 0;
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.icon {
+	font-size: 2.2rem;
+	color: $white-color;
+	transition: color 0.3s;
+	&:hover {
+		color: $secondary-color;
+	}
+}
+
+.newsletterContainer {
+	padding: 1rem 0;
+}
+
+.inputContainer {
+	margin: 2rem auto;
+	width: 80%;
+	height: 2.2rem;
+	position: relative;
+	@include media-size("small") {
+		width: 30rem;
+	}
+
+	.input {
+		padding: 0.5rem;
+		height: 2.2rem;
+		width: 100%;
+		border-radius: 100px;
+
+		border: none;
+	}
+}
+
+.btnInput {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 2.2rem;
+	margin: 0;
+}
+
+.copyrights {
+	grid-column: span 3;
+	margin-top: 2rem;
+}
+
+.copy {
+	text-align: center;
+	padding: 1rem;
+	color: $dirty-white-color;
+}

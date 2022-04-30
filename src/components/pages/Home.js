@@ -8,6 +8,8 @@ import About from "../components/About";
 import TypewriterComponent from "typewriter-effect";
 import { Link } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
+import Newsletter from "../components/Newsletter";
+import Footer from "../layout/Footer";
 
 const isMobile = window.matchMedia("(max-width: 576px)").matches;
 
@@ -56,6 +58,8 @@ const Home = () => {
 				<main>
 					<About></About>
 					<Testimonials />
+					<Newsletter />
+					<Footer />
 				</main>
 			</>
 		);
@@ -102,6 +106,8 @@ const Home = () => {
 				<main>
 					<About></About>
 					<Testimonials />
+					<Newsletter />
+					<Footer />
 				</main>
 			</>
 		);
