@@ -1,0 +1,23 @@
+@import "../../scss/variables.module.scss";
+
+.AccordionItem {
+	color: $dirty-white-color;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	border-bottom: 1px solid $secondary-color;
+	font-size: 1.6rem;
+	cursor: pointer;
+}
+
+.icon {
+	color: $secondary-color;
+}
+
+.content {
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+}

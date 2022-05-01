@@ -1,0 +1,29 @@
+@import "../../scss/variables.module.scss";
+
+.Directions {
+	padding: 4rem;
+	background-color: $black-color;
+}
+
+.directionsContainer {
+}
+
+.mapContainer {
+	margin: 4rem 0;
+	text-align: center;
+}
+
+.group {
+	text-align: center;
+	color: $dirty-white-color;
+}
+h3 {
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+p {
+	font-size: 1.4rem;
+}
+textarea {
+	resize: none;
+}

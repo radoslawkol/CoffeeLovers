@@ -1,0 +1,22 @@
+@import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
+
+.Faq {
+	padding: 4rem;
+	background-color: $primary-color;
+	@include media-size("medium") {
+		padding: 10rem;
+	}
+}
+
+.accordion {
+	margin: 2rem 0;
+	@include media-size("extra-large") {
+		width: 70%;
+		margin: 2rem auto;
+	}
+}
+
+.heading {
+	color: $dirty-white-color;
+}

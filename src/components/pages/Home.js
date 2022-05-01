@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
 import Newsletter from "../components/Newsletter";
 import Footer from "../layout/Footer";
+import Contact from "../components/Contact";
 
 const isMobile = window.matchMedia("(max-width: 576px)").matches;
 
@@ -59,6 +60,7 @@ const Home = () => {
 					<About></About>
 					<Testimonials />
 					<Newsletter />
+					<Contact />
 					<Footer />
 				</main>
 			</>
@@ -107,6 +109,7 @@ const Home = () => {
 					<About></About>
 					<Testimonials />
 					<Newsletter />
+					<Contact />
 					<Footer />
 				</main>
 			</>

@@ -7,9 +7,16 @@ import {
 	faInstagram,
 	faReddit,
 } from "@fortawesome/free-brands-svg-icons";
+import { NewsletterModalContext } from "../../store/newsletterModal-context";
+import { useContext, useRef } from "react";
 
 const Footer = () => {
-	const openModalHandler = () => {};
+	const inputRef = useRef();
+	const modalCtx = useContext(NewsletterModalContext);
+	const openModalHandler = () => {
+		modalCtx.openModal();
+		inputRef.current.value = "";
+	};
 
 	return (
 		<footer className={classes.Footer}>
@@ -50,7 +57,14 @@ const Footer = () => {
 				<h3>Sign up to our Newsletter</h3>
 				<div>
 					<div className={classes.inputContainer}>
-						<input type='email' className={classes.input} placeholder='email' />
+						<input
+							type='email'
+							className={classes.input}
+							placeholder='email'
+							ref={inputRef}
+							onChange={(e) => modalCtx.setUserEmail(e.target.value)}
+						/>
+
 						<button
 							onClick={openModalHandler}
 							className={`${classes.btnInput} btn btn--yellow`}

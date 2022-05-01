@@ -5,13 +5,16 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import NewsletterModalProvider from "./store/newsletterModal-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<StrictMode>
 		<BrowserRouter>
 			<React.StrictMode>
-				<App />
+				<NewsletterModalProvider>
+					<App />
+				</NewsletterModalProvider>
 			</React.StrictMode>
 		</BrowserRouter>
 	</StrictMode>
