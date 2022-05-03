@@ -1,0 +1,57 @@
+@import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
+
+.ServicesCards {
+	margin: 5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	padding: 4rem 6rem;
+	background-color: $primary-color;
+	color: $dirty-white-color;
+	@include media-size("large") {
+		flex-direction: row;
+	}
+	@include media-size("big") {
+		gap: 4rem;
+	}
+}
+
+.card {
+	height: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+	border-radius: 15px;
+	background-color: $black-color;
+	transition: background-color 0.3s box-shadow 0.3s;
+	@include media-size("small") {
+		width: 60%;
+	}
+	@include media-size("medium") {
+		width: 50%;
+	}
+	@include media-size("big") {
+		padding: 3rem;
+	}
+
+	&:hover {
+		background-color: rgba($black-color, 0.8);
+		box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.57);
+	}
+}
+
+.icon {
+	font-size: 2rem;
+	color: $secondary-color;
+}
+
+.text {
+	padding: 0 3rem;
+	text-align: center;
+	@include media-size("large") {
+		padding: 0;
+	}
+}

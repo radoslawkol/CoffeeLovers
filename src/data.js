@@ -6,6 +6,22 @@ import user3 from "./images/reviewers/user-3.jpg";
 import user4 from "./images/reviewers/user-4.jpg";
 import user5 from "./images/reviewers/user-5.jpg";
 
+import {
+	faMugHot,
+	faIceCream,
+	faCakeCandles,
+	faTruck,
+} from "@fortawesome/free-solid-svg-icons";
+
+import americano from "./images/americano.jpg";
+import hotChocolate from "./images/hot-chocolate.jpg";
+import cappuchino from "./images/cappuchino.jpg";
+import macchiato from "./images/macchiato.jpg";
+import latte from "./images/latte.jpg";
+import ristretto from "./images/ristretto.jpg";
+import strawberyMilk from "./images/strawwbery-milk.jpg";
+import expressoMachiato from "./images/expresso-macchiato.jpg";
+
 export const testimonials = [
 	{
 		id: "t1",
@@ -74,5 +90,83 @@ export const faqData = [
 	{
 		question: "What kinds of coffee do you sell?",
 		answer: `Yes, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere ut purus ultrices porttitor id.`,
+	},
+];
+
+export const servicesData = [
+	{
+		type: "Coffee",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.",
+		icon: faMugHot,
+	},
+	{
+		type: "Desserts",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam. Lorem ipsum dolor sit amet",
+		icon: faIceCream,
+	},
+	{
+		type: "Specials",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.",
+		icon: faCakeCandles,
+	},
+	{
+		type: "Delivery",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam.",
+		icon: faTruck,
+	},
+];
+
+export const servicesMenu = [
+	{
+		name: "Caffe Macchiato",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 15,
+		photo: macchiato,
+	},
+	{
+		name: "Caffe Latte",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 14,
+		photo: latte,
+	},
+	{
+		name: "Expresso Macchiato",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 13,
+		photo: expressoMachiato,
+	},
+	{
+		name: "Caffe Americano.",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 18,
+		photo: americano,
+	},
+	{
+		name: "Hot chocolate",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 12,
+		photo: hotChocolate,
+	},
+	{
+		name: "Strawberry Milk",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 19,
+		photo: strawberyMilk,
+	},
+	{
+		name: "Coffee Ristretto",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 21,
+		photo: ristretto,
+	},
+	{
+		name: "Cappuccino",
+		description: "Shot of expressio extracted the Italian way.",
+		price: 16,
+		photo: cappuchino,
 	},
 ];

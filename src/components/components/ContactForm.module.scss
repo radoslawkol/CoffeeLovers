@@ -1,14 +1,35 @@
 @import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
 
 .ContactForm {
 	padding: 4rem;
 	background-color: $black-color;
+	@include media-size("big") {
+		width: 30%;
+		background-color: $secondary-color;
+	}
+}
+
+.heading {
+	@include media-size("big") {
+		color: $black-color;
+	}
 }
 
 .form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@include media-size("small") {
+		width: 75%;
+		margin: 3rem auto;
+	}
+	@include media-size("large") {
+		width: 50%;
+	}
+	@include media-size("big") {
+		width: 100%;
+	}
 }
 
 .input {
@@ -26,4 +47,7 @@
 
 .btn {
 	margin: 2rem;
+	@include media-size("big") {
+		background-color: $black-color;
+	}
 }

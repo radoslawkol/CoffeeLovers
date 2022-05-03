@@ -1,0 +1,65 @@
+@import "../../scss/variables.module.scss";
+@import "../../scss/mixins.module.scss";
+
+.ServicesMenu {
+	margin: 5rem 0;
+}
+
+.menuContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	margin-top: 5rem;
+	padding: 4rem;
+	color: $dirty-white-color;
+	@include media-size("large") {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include media-size("extra-large") {
+		width: 70%;
+		margin: 5rem auto;
+	}
+}
+
+.menuItem {
+	display: flex;
+	gap: 1rem;
+	width: 30rem;
+}
+
+.image {
+	border-radius: 50%;
+	width: 4.5rem;
+	height: 4.5rem;
+	object-fit: cover;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.itemHeading {
+	font-size: 2rem;
+}
+
+.price {
+	font-size: 1.6rem;
+	color: $secondary-color;
+}
+
+.description {
+	font-size: 1.2rem;
+}

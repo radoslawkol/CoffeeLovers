@@ -1,0 +1,11 @@
+@import "../../scss/mixins.module.scss";
+@import "../../scss/variables.module.scss";
+
+.Contact {
+	background-color: $black-color;
+	@include media-size("big") {
+		width: 100%;
+		display: flex;
+		justify-content: stretch;
+	}
+}
