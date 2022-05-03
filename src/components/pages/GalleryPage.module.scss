@@ -1,0 +1,12 @@
+@import "../../scss/variables.module.scss";
+
+.GalleryPage {
+	min-width: 100vw;
+	background-color: $primary-color;
+}
+.heading {
+	font-size: 3.5rem;
+	letter-spacing: 2px;
+	padding-top: 15rem;
+	color: $secondary-color;
+}

@@ -1,0 +1,67 @@
+@import "../../scss/variables.module.scss";
+
+@import "../../scss/mixins.module.scss";
+
+.Gallery {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	gap: 6rem;
+	padding: 10rem 4rem;
+	@include media-size("large") {
+		margin-bottom: 10rem;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: 24rem;
+		justify-items: center;
+		gap: 0;
+		gap: 2rem 0;
+		grid-auto-flow: dense;
+		padding: 20rem 8rem;
+	}
+	@include media-size("extra-large") {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	@include media-size("big") {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+.card {
+	overflow: hidden;
+	width: 30rem;
+	@include media-size("large") {
+		&:first-of-type {
+			grid-row: span 2;
+		}
+		&:nth-of-type(6) {
+			grid-row: span 2;
+		}
+		&:nth-of-type(8) {
+			grid-row: span 2;
+		}
+		&:nth-of-type(10) {
+			max-height: 20rem;
+			img {
+				object-fit: cover;
+				height: 100%;
+			}
+		}
+		&:nth-of-type(11) {
+			grid-row: span 2;
+		}
+	}
+}
+
+.image {
+	width: 100%;
+	margin-bottom: 1rem;
+	transition: transform 0.3s, opacity 0.3s;
+	&:hover {
+		transform: scale(1.05);
+		opacity: 0.7;
+	}
+}
+
+.tag {
+	margin-right: 1rem;
+}

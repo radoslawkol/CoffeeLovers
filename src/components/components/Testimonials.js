@@ -20,6 +20,17 @@ const Testimonials = () => {
 		if (slide < 0) {
 			setSlide(testimonials.length - 1);
 		}
+
+		if (window.innerWidth >= 776 && slide === 0) {
+			setSlide(testimonials.length - 2);
+		}
+
+		if (window.innerWidth >= 1400 && slide === 0) {
+			setSlide(testimonials.length - 3);
+		}
+		if (window.innerWidth >= 1400 && slide === 0) {
+			setSlide(testimonials.length - 4);
+		}
 	};
 	const nextCartHandler = () => {
 		setSlide((state) => {
@@ -29,27 +40,67 @@ const Testimonials = () => {
 		if (slide >= testimonials.length - 1) {
 			setSlide(0);
 		}
+
+		if (window.innerWidth >= 776 && slide === testimonials.length - 2) {
+			setSlide(0);
+		}
+
+		if (window.innerWidth >= 1400 && slide === testimonials.length - 3) {
+			setSlide(0);
+		}
+
+		if (window.innerWidth >= 1600 && slide === testimonials.length - 4) {
+			setSlide(0);
+		}
 	};
 
 	useEffect(() => {
 		const slider = document.getElementById("slider");
 		let translateCalc;
 
-		console.log(slide);
+		if (window.innerWidth >= 1600) {
+			if (slide >= 0) {
+				translateCalc = `-${slide * 25}% - ${1 * slide}`;
+			} else if (slide === -1) {
+				translateCalc = `${-(testimonials.length - 4) * 25}% - ${
+					1 * (testimonials.length - 4)
+				}`;
+			}
+			slider.style.transform = `translate(calc(${translateCalc}rem))`;
+			return;
+		}
+
+		if (window.innerWidth >= 1400) {
+			if (slide >= 0) {
+				translateCalc = `-${slide * 33.3}% - ${1 * slide}`;
+			} else if (slide === -1) {
+				translateCalc = `${-(testimonials.length - 3) * 33.3}% - ${
+					1 * (testimonials.length - 3)
+				}`;
+			}
+			slider.style.transform = `translate(calc(${translateCalc}rem))`;
+			return;
+		}
+
+		if (window.innerWidth >= 776) {
+			if (slide >= 0) {
+				translateCalc = `-${slide * 50}% - ${1.5 * slide}`;
+			} else if (slide === -1) {
+				translateCalc = `${-(testimonials.length - 2) * 50}% - ${
+					1.5 * (testimonials.length - 2)
+				}`;
+			}
+			slider.style.transform = `translate(calc(${translateCalc}rem))`;
+			return;
+		}
 
 		if (slide >= 0) {
 			translateCalc = `-${slide * 100}% - ${3 * slide}`;
-		}
-		// applied for slide = -1
-		else if (slide === -1) {
+		} else if (slide === -1) {
 			translateCalc = `${-(testimonials.length - 1) * 100}% - ${
 				3 * (testimonials.length - 1)
 			}`;
-		} else {
-			translateCalc = `-${slide * 100}% - ${3 * slide}`;
 		}
-
-		console.log(`translate(calc(${translateCalc}rem))`);
 
 		slider.style.transform = `translate(calc(${translateCalc}rem))`;
 	}, [slide]);
@@ -66,17 +117,17 @@ const Testimonials = () => {
 							return <TestimonialItem key={item.id} {...item} />;
 						})}
 					</div>
-					<FontAwesomeIcon
-						icon={faCircleLeft}
-						className={classes.arrow}
-						onClick={prevCartHandler}
-					/>
-					<FontAwesomeIcon
-						icon={faCircleRight}
-						className={classes.arrow}
-						onClick={nextCartHandler}
-					/>
 				</div>
+				<FontAwesomeIcon
+					icon={faCircleLeft}
+					className={classes.arrow}
+					onClick={prevCartHandler}
+				/>
+				<FontAwesomeIcon
+					icon={faCircleRight}
+					className={classes.arrow}
+					onClick={nextCartHandler}
+				/>
 			</div>
 		</section>
 	);

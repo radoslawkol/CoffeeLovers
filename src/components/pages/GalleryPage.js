@@ -1,11 +1,15 @@
 import "./GalleryPage.module.scss";
+import Gallery from "../components/Gallery";
+import classes from "./GalleryPage.module.scss";
+import Footer from "../layout/Footer";
 
 const GalleryPage = () => {
 	return (
-		<img
-			src='https://images.unsplash.com/photo-1577392648386-000e77cbc962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
-			alt=''
-		/>
+		<section className={classes.GalleryPage}>
+			<h2 className={`${classes.heading} section-heading`}>Gallery</h2>
+			<Gallery />;
+			<Footer />
+		</section>
 	);
 };
 

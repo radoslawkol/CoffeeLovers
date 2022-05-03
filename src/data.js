@@ -170,3 +170,66 @@ export const servicesMenu = [
 		photo: cappuchino,
 	},
 ];
+
+export const galleryData = [
+	{
+		photo:
+			"https://images.unsplash.com/photo-1631155989916-4aabcabcce8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+		tags: ["coffee"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1577392648386-000e77cbc962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+		tags: ["coffee", "cookies"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1569097893724-974d2018a152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+		tags: ["coffee", "latte"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1521917441209-e886f0404a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2060&q=80",
+		tags: ["cafe", "interior"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+		tags: ["cafe", "interior"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1529892485617-25f63cd7b1e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+		tags: ["cafe", "4 cups"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+		tags: ["cafe", "4 cups"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1592663527359-cf6642f54cff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=719&q=80",
+		tags: ["cafe", "milk"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1503481766315-7a586b20f66d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1453&q=80",
+		tags: ["cafe", "milk"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1526401281623-279b498f10f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+		tags: ["coffee", "cup"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1515592302748-6c5ea17e2f0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+		tags: ["coffee", "table"],
+	},
+	{
+		photo:
+			"https://images.unsplash.com/photo-1589985902809-39d25db22101?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+		tags: ["coffee", "milk"],
+	},
+];
