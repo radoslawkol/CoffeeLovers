@@ -9,8 +9,22 @@ import {
 	faCircleRight,
 } from "@fortawesome/free-regular-svg-icons";
 
+import mixins from "../../scss/mixins.module.scss";
+
 const Testimonials = () => {
 	const [slide, setSlide] = useState(0);
+
+	const translate = (percentage, gap, last) => {
+		let translateCalc;
+		if (slide >= 0) {
+			translateCalc = `-${slide * percentage}% - ${gap * slide}`;
+		} else if (slide === -1) {
+			translateCalc = `${-(testimonials.length - last) * percentage}% - ${
+				1.5 * (testimonials.length - last)
+			}`;
+		}
+		return `translate(calc(${translateCalc}rem))`;
+	};
 
 	const prevCartHandler = () => {
 		setSlide((state) => {
@@ -28,7 +42,7 @@ const Testimonials = () => {
 		if (window.innerWidth >= 1400 && slide === 0) {
 			setSlide(testimonials.length - 3);
 		}
-		if (window.innerWidth >= 1400 && slide === 0) {
+		if (window.innerWidth >= 1600 && slide === 0) {
 			setSlide(testimonials.length - 4);
 		}
 	};
@@ -56,54 +70,34 @@ const Testimonials = () => {
 
 	useEffect(() => {
 		const slider = document.getElementById("slider");
-		let translateCalc;
+		let transform;
 
-		if (window.innerWidth >= 1600) {
-			if (slide >= 0) {
-				translateCalc = `-${slide * 25}% - ${1 * slide}`;
-			} else if (slide === -1) {
-				translateCalc = `${-(testimonials.length - 4) * 25}% - ${
-					1 * (testimonials.length - 4)
-				}`;
-			}
-			slider.style.transform = `translate(calc(${translateCalc}rem))`;
-			return;
+		const interval = setInterval(() => {
+			nextCartHandler();
+			console.log(slide);
+		}, 2000);
+
+		transform = translate(100, Number(classes.gap), 1);
+
+		if (window.innerWidth >= mixins.medium) {
+			transform = translate(100 / 2, Number(classes.gap) / 2, 2);
 		}
 
-		if (window.innerWidth >= 1400) {
-			if (slide >= 0) {
-				translateCalc = `-${slide * 33.3}% - ${1 * slide}`;
-			} else if (slide === -1) {
-				translateCalc = `${-(testimonials.length - 3) * 33.3}% - ${
-					1 * (testimonials.length - 3)
-				}`;
-			}
-			slider.style.transform = `translate(calc(${translateCalc}rem))`;
-			return;
+		if (window.innerWidth >= mixins.extraLarge) {
+			transform = translate(100 / 3, Number(classes.gap) / 3, 3);
 		}
 
-		if (window.innerWidth >= 776) {
-			if (slide >= 0) {
-				translateCalc = `-${slide * 50}% - ${1.5 * slide}`;
-			} else if (slide === -1) {
-				translateCalc = `${-(testimonials.length - 2) * 50}% - ${
-					1.5 * (testimonials.length - 2)
-				}`;
-			}
-			slider.style.transform = `translate(calc(${translateCalc}rem))`;
-			return;
+		if (window.innerWidth >= mixins.big) {
+			transform = translate(100 / 4, Number(classes.gap) / 4, 4);
 		}
+		slider.style.transform = transform;
 
-		if (slide >= 0) {
-			translateCalc = `-${slide * 100}% - ${3 * slide}`;
-		} else if (slide === -1) {
-			translateCalc = `${-(testimonials.length - 1) * 100}% - ${
-				3 * (testimonials.length - 1)
-			}`;
-		}
-
-		slider.style.transform = `translate(calc(${translateCalc}rem))`;
+		return () => {
+			clearInterval(interval);
+		};
 	}, [slide]);
+
+	useEffect(() => {}, []);
 
 	return (
 		<section className={classes.Testimonials}>

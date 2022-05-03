@@ -16,6 +16,14 @@ $breakpoints: (
 	),
 );
 
+:export {
+	small: 576;
+	medium: 776;
+	large: 992;
+	extraLarge: 1400;
+	big: 1600;
+}
+
 @mixin media-size($breakpoint) {
 	@if map-has-key($breakpoints, $breakpoint) {
 		@media #{inspect(map-get($breakpoints, $breakpoint))} {

@@ -3,6 +3,11 @@
 
 $cardsGap: 3rem;
 
+// to react
+:export {
+	gap: 3;
+}
+
 .Testimonials {
 	background-color: $secondary-color;
 	padding: 1rem 0 8rem 0;
