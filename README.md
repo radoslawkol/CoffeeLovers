@@ -1,6 +1,6 @@
-#Coffee website project
+# Coffee website project
 
-This website is a
+This is cafe website. See project: https://tangerine-halva-82f755.netlify.app
 This page is fully responsive page. It's frontend page. Sending froms is only a visual effect.
 
 ## Used technology
