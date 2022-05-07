@@ -1,5 +1,5 @@
 import "./index.scss";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/layout/Navigation";
 import Home from "./components/pages/Home";
@@ -11,13 +11,21 @@ import NewsletterModal from "./components/layout/NewsletterModal";
 import { NewsletterModalContext } from "./store/newsletterModal-context";
 import ScrollToTop from "./components/utils/ScrollToTop";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
 	const modalCtx = useContext(NewsletterModalContext);
 
 	useEffect(() => {
+		AOS.init();
+		AOS.refresh();
+	}, []);
+
+	useEffect(() => {
 		setTimeout(() => {
 			modalCtx.openModal();
-		}, 4000);
+		}, 6000);
 	}, []);
 	return (
 		<>

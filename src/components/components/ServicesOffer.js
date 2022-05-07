@@ -5,11 +5,15 @@ const ServicesOffer = () => {
 	return (
 		<section className={classes.ServicesOffer}>
 			<div className={classes.container}>
-				<div className={classes.imageContainer}>
+				<div data-aos='fade-right' className={classes.imageContainer}>
 					<img src={image} alt='coffee and beans' className={classes.image} />
 				</div>
 				<div className={classes.content}>
-					<div className={classes.group}>
+					<div
+						data-aos='fade-up'
+						data-aos-delay='100'
+						className={classes.group}
+					>
 						<h3 className={classes.heading}>100% Delicous</h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
@@ -17,7 +21,11 @@ const ServicesOffer = () => {
 							Consequat dignissim volutpat a nisi. Integer quis ornare volutpat.
 						</p>
 					</div>
-					<div className={classes.group}>
+					<div
+						data-aos='fade-up'
+						data-aos-delay='200'
+						className={classes.group}
+					>
 						<h3 className={classes.heading}>Spiced coffee</h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
@@ -25,7 +33,11 @@ const ServicesOffer = () => {
 							Consequat dignissim volutpat.
 						</p>
 					</div>
-					<div className={classes.group}>
+					<div
+						data-aos='fade-up'
+						data-aos-delay='300'
+						className={classes.group}
+					>
 						<h3 className={classes.heading}>Hot Offer</h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien

@@ -1,7 +1,8 @@
 @import "../../scss/variables.module.scss";
 
 .GalleryPage {
-	min-width: 100vw;
+	max-width: 100vw;
+	overflow: hidden;
 	background-color: $primary-color;
 }
 .heading {

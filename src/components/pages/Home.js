@@ -33,7 +33,7 @@ const Home = () => {
 
 	useEffect(() => {
 		window.addEventListener("resize", windowSizeHandler);
-	});
+	}, []);
 
 	if (isMobileDevice) {
 		return (
@@ -41,14 +41,19 @@ const Home = () => {
 				<header className={classes.mobiHeader}>
 					<div className={classes["mobiHeader__title"]}>
 						<img
+							data-aos='fade-down'
 							src={logo}
 							alt='logo of cafe'
 							className={classes["mobiHeader__logo"]}
 						/>
-						<h2>Company Name</h2>
+						<h2 data-aos='fade-up' data-aos-delay='200'>
+							CoffeeLove
+						</h2>
 					</div>
 					<div className={classes["mobiHeader__content"]}>
-						<h1>Find the best coffee for you!</h1>
+						<h1 data-aos='fade-right' data-aos-delay='350'>
+							Find the best coffee for you!
+						</h1>
 						<FontAwesomeIcon
 							onClick={scrollDownHandler}
 							icon={faAnglesDown}
@@ -56,7 +61,7 @@ const Home = () => {
 						/>
 					</div>
 				</header>
-				<main>
+				<main className={classes.main}>
 					<About></About>
 					<Testimonials />
 					<Newsletter />
@@ -71,13 +76,20 @@ const Home = () => {
 				<header className={classes.desktopHeader}>
 					<div className={classes["desktopHeader__title"]}>
 						<img
+							data-aos='flip-left'
 							src={logo}
 							alt='logo of cafe'
 							className={classes["desktopHeader__logo"]}
 						/>
-						<h2>Company Name</h2>
+						<h2 data-aos='fade-up' data-aos-delay='200'>
+							CoffeeLove
+						</h2>
 					</div>
-					<div className={classes["desktopHeader__content"]}>
+					<div
+						data-aos='fade-right'
+						data-aos-duration='800'
+						className={classes["desktopHeader__content"]}
+					>
 						<h1 className={classes["desktopHeader__heading"]}>
 							<TypewriterComponent
 								onInit={(typewriter) => {
@@ -97,7 +109,11 @@ const Home = () => {
 							Read more
 						</Link>
 					</div>
-					<div className={classes["desktopHeader__side-content"]}>
+					<div
+						data-aos='fade-left'
+						data-aos-delay='500'
+						className={classes["desktopHeader__side-content"]}
+					>
 						<p className={classes["desktopHeader__quote"]}>
 							"It’s amazing how the world begins to change through the eyes of a
 							cup of coffee"

@@ -3,7 +3,7 @@ import classes from "./NewsletterModal.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { NewsletterModalContext } from "../../store/newsletterModal-context";
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 
 const Backdrop = () => {
 	const modalCtx = useContext(NewsletterModalContext);
@@ -27,7 +27,7 @@ const Modal = () => {
 		closeModalHandler();
 	};
 	return (
-		<div className={classes.Modal}>
+		<div data-aos='fade-up' className={classes.Modal}>
 			<FontAwesomeIcon
 				icon={faXmark}
 				className={classes.icon}
@@ -51,11 +51,7 @@ const Modal = () => {
 					value={modalCtx.enteredEmail}
 					onChange={(e) => modalCtx.setUserEmail(e.target.value)}
 				/>
-				<button
-					type='submit'
-					className={`${classes.btn} btn btn--yellow`}
-					// onClick={closeModalHandler}
-				>
+				<button type='submit' className={`${classes.btn} btn btn--yellow`}>
 					Subscribe
 				</button>
 			</form>
@@ -63,7 +59,7 @@ const Modal = () => {
 	);
 };
 
-const NewsletterModal = ({ children }) => {
+const NewsletterModal = () => {
 	return (
 		<>
 			{ReactDOM.createPortal(<Backdrop />, document.getElementById("overlays"))}

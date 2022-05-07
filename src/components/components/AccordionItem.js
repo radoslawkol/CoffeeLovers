@@ -3,7 +3,7 @@ import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import classes from "./AccordionItem.module.scss";
 import { useState } from "react";
 
-const AccordionItem = ({ question, answer }) => {
+const AccordionItem = ({ question, answer, index }) => {
 	const [isContentOpen, setIsContentOpen] = useState(false);
 	const showContentHandler = () => {
 		setIsContentOpen((prevState) => {
@@ -12,9 +12,15 @@ const AccordionItem = ({ question, answer }) => {
 	};
 
 	return (
-		<div className={classes.AccordionItem}>
+		<div
+			data-aos='fade-up'
+			data-aos-delay={`${index * 150}`}
+			className={classes.AccordionItem}
+		>
 			<div className={classes.title} onClick={showContentHandler}>
-				<p>{question}</p>
+				<p data-aos='fade-up' data-aos-delay={`${index * 100}`}>
+					{question}
+				</p>
 				{!isContentOpen && (
 					<FontAwesomeIcon icon={faPlus} className={classes.icon} />
 				)}

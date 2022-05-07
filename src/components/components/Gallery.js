@@ -7,11 +7,17 @@ const Gallery = () => {
 		<div className={classes.Gallery}>
 			{galleryData.map((item, index) => {
 				return (
-					<div className={classes.card} key={index}>
+					<div
+						data-aos='fade-up'
+						data-aos-delay={`${index * 140}`}
+						className={classes.card}
+						key={index}
+					>
 						<img src={item.photo} alt='coffee' className={classes.image} />
 						{item.tags.map((tag, index) => {
 							return (
 								<button
+									// data-aos='fade-right'
 									className={`${classes.tag} btn btn--yellow`}
 									key={index}
 								>

@@ -1,5 +1,4 @@
 // Testimonials
-import { Link } from "react-router-dom";
 import user1 from "./images/reviewers/user-1.jpg";
 import user2 from "./images/reviewers/user-2.jpg";
 import user3 from "./images/reviewers/user-3.jpg";

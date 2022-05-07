@@ -13,6 +13,7 @@ const About = () => {
 			<h2 className='section-heading'>About us</h2>
 			<div className={classes["About__container"]}>
 				<p
+					data-aos='fade-right'
 					className={`${classes["About__text"]} ${classes["About__text--first"]}`}
 				>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
@@ -21,22 +22,30 @@ const About = () => {
 				</p>
 				<div className={classes["About__content-image"]}>
 					<img
+						data-aos='flip-left'
+						data-aos-delay='100'
 						src={photo1}
 						alt='Coffee machine'
 						className={classes["About__photo"]}
 					/>
 					<img
+						data-aos='flip-left'
+						data-aos-delay='200'
 						src={photo2}
 						alt='Waiter making coffee'
 						className={classes["About__photo"]}
 					/>
 					<img
+						data-aos='flip-left'
+						data-aos-delay='300'
 						src={photo3}
 						alt='cups of coffee'
 						className={classes["About__photo"]}
 					/>
 				</div>
 				<p
+					data-aos='fade-left'
+					data-aos-delay='200'
 					className={`${classes["About__text"]} ${classes["About__text--second"]}`}
 				>
 					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -45,6 +54,8 @@ const About = () => {
 					laborum.
 				</p>
 				<Link
+					data-aos='fade-up'
+					data-aos-delay='300'
 					to='/about'
 					className={`btn btn--yellow ${classes["About__btn"]}`}
 				>

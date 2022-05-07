@@ -21,42 +21,64 @@ const Footer = () => {
 	return (
 		<footer className={classes.Footer}>
 			<div className={classes.logoContainer}>
-				<div className={classes.logo}>
+				<div data-aos='fade-right' className={classes.logo}>
 					<img src={logo} alt='logo of cafe' className={classes.logoImg} />
 					<h2 className={classes.logoName}>Logo</h2>
 				</div>
 				<div className={classes.line} />
 			</div>
 			<div className={classes.info}>
-				<p className={classes.text}>
+				<p data-aos='fade-up' className={classes.text}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat egestas
 					volutpat nisl nulla dignissim volutpat quam ac cursus. Aenean odio est
 					tincidunt phasellus accumsan commodo. Pharetra varius pulvinar non
 					vulputate feugiat. Id cras eget diam libero lacus. Quam eget pulvinar
 					non mi nibh tincidunt.
 				</p>
-				<Link to='/about' className={`${classes.btn} btn btn--yellow`}>
+				<Link
+					data-aos='fade-up'
+					to='/about'
+					className={`${classes.btn} btn btn--yellow`}
+				>
 					Read more
 				</Link>
 			</div>
 			<div className={classes.socialsContainer}>
-				<h3>Social Media</h3>
+				<h3 data-aos='fade-up'>Social Media</h3>
 				<div className={classes.socials}>
-					<a target='_blank' href='https://www.facebook.com/' rel='noreferrer'>
+					<a
+						data-aos='fade-up'
+						data-aos-delay='100'
+						target='_blank'
+						href='https://www.facebook.com/'
+						rel='noreferrer'
+					>
 						<FontAwesomeIcon icon={faFacebook} className={classes.icon} />
 					</a>
-					<a target='_blank' href='https://www.instagram.com/' rel='noreferrer'>
+					<a
+						data-aos='fade-up'
+						data-aos-delay='200'
+						target='_blank'
+						href='https://www.instagram.com/'
+						rel='noreferrer'
+					>
 						<FontAwesomeIcon icon={faInstagram} className={classes.icon} />
 					</a>
-					<a target='_blank' href='https://www.reddit.com/' rel='noreferrer'>
+					<a
+						data-aos='fade-up'
+						data-aos-delay='300'
+						target='_blank'
+						href='https://www.reddit.com/'
+						rel='noreferrer'
+					>
 						<FontAwesomeIcon icon={faReddit} className={classes.icon} />
 					</a>
 				</div>
 			</div>
 			<div className={classes.newsletterContainer}>
-				<h3>Sign up to our Newsletter</h3>
+				<h3 data-aos='fade-up'>Sign up to our Newsletter</h3>
 				<div>
-					<div className={classes.inputContainer}>
+					<div data-aos='fade-right' className={classes.inputContainer}>
 						<input
 							type='email'
 							className={classes.input}
@@ -72,7 +94,7 @@ const Footer = () => {
 							Subscribe
 						</button>
 					</div>
-					<p className={classes.text}>
+					<p data-aos='fade-left' className={classes.text}>
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque,
 						consequatur ratione tempora perferendis rerum nobis? Repudiandae
 						necessitatibus dolorum, consequuntur numquam unde possimus. Natus

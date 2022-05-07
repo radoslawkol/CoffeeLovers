@@ -8,7 +8,13 @@ import AccordionItem from "./AccordionItem";
 const Faq = () => {
 	return (
 		<section className={classes.Faq}>
-			<h2 className={`section-heading ${classes.heading}`}>Faq</h2>
+			<h2
+				data-aos='fade-up'
+				data-aos-delay='200'
+				className={`section-heading ${classes.heading}`}
+			>
+				Faq
+			</h2>
 			<div className={classes.accordion}>
 				{faqData.map((item, index) => {
 					return (
@@ -16,6 +22,7 @@ const Faq = () => {
 							question={item.question}
 							answer={item.answer}
 							key={index}
+							index={index}
 						/>
 					);
 				})}

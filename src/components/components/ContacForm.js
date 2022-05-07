@@ -30,10 +30,18 @@ const ContactForm = () => {
 		<>
 			{isModalOpen && <ContactModal />}
 			<section className={classes.ContactForm}>
-				<h2 className={`section-heading ${classes.heading}`}>
+				<h2
+					data-aos='fade-right'
+					className={`section-heading ${classes.heading}`}
+				>
 					Contact with us
 				</h2>
-				<form className={classes.form} onSubmit={submitHandler}>
+				<form
+					data-aos='fade-up'
+					data-aos-delay='200'
+					className={classes.form}
+					onSubmit={submitHandler}
+				>
 					<input
 						type='text'
 						placeholder='Name...'

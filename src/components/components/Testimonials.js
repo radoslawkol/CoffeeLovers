@@ -55,15 +55,21 @@ const Testimonials = () => {
 			setSlide(0);
 		}
 
-		if (window.innerWidth >= 776 && slide === testimonials.length - 2) {
+		if (
+			window.innerWidth >= mixins.medium &&
+			slide === testimonials.length - 2
+		) {
 			setSlide(0);
 		}
 
-		if (window.innerWidth >= 1400 && slide === testimonials.length - 3) {
+		if (
+			window.innerWidth >= mixins.extraLarge &&
+			slide === testimonials.length - 3
+		) {
 			setSlide(0);
 		}
 
-		if (window.innerWidth >= 1600 && slide === testimonials.length - 4) {
+		if (window.innerWidth >= mixins.big && slide === testimonials.length - 4) {
 			setSlide(0);
 		}
 	};
@@ -74,7 +80,6 @@ const Testimonials = () => {
 
 		const interval = setInterval(() => {
 			nextCartHandler();
-			console.log(slide);
 		}, 2000);
 
 		transform = translate(100, Number(classes.gap), 1);
@@ -101,10 +106,17 @@ const Testimonials = () => {
 
 	return (
 		<section className={classes.Testimonials}>
-			<h2 className={`section-heading ${classes["Testimonials__heading"]}`}>
+			<h2
+				data-aos='fade-up'
+				className={`section-heading ${classes["Testimonials__heading"]}`}
+			>
 				what customers say about us?
 			</h2>
-			<div className={classes["Testimonials__wrapper"]}>
+			<div
+				data-aos='fade-up'
+				data-aos-duration='400'
+				className={classes["Testimonials__wrapper"]}
+			>
 				<div className={classes["Testimonials__container"]}>
 					<div className={classes["Testimonials__slider"]} id='slider'>
 						{testimonials.map((item) => {

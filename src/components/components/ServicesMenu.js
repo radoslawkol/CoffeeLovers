@@ -5,11 +5,18 @@ import { servicesMenu } from "../../data";
 const ServicesMenu = () => {
 	return (
 		<section className={classes.ServicesMenu}>
-			<h2 className={`section-heading`}>Coffee menu</h2>
+			<h2 data-aos='fade-up' className={`section-heading`}>
+				Coffee menu
+			</h2>
 			<div className={classes.menuContainer}>
 				{servicesMenu.map((item, index) => {
 					return (
-						<figure className={classes.menuItem} key={index}>
+						<figure
+							data-aos='fade-up'
+							data-aos-delay={`${index * 100}`}
+							className={classes.menuItem}
+							key={index}
+						>
 							<img src={item.photo} alt={item.name} className={classes.image} />
 							<div className={classes.content}>
 								<div key={index} className={classes.title}>

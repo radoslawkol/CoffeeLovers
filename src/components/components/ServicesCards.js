@@ -7,7 +7,12 @@ const ServicesCards = () => {
 		<section className={classes.ServicesCards}>
 			{servicesData.map((item, index) => {
 				return (
-					<div className={classes.card} key={index}>
+					<div
+						data-aos='flip-right'
+						data-aos-delay={`${index * 100 + 150}`}
+						className={classes.card}
+						key={index}
+					>
 						<FontAwesomeIcon
 							icon={item.icon}
 							className={classes.icon}

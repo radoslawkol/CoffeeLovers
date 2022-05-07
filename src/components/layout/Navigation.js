@@ -28,7 +28,7 @@ const Navigation = () => {
 		<nav className={classes.nav}>
 			<div className={classes.logo}>
 				<img className={classes.logo__img} src={logo} alt='Logo of cafe' />
-				<p className={classes.logo__name}>Logo</p>
+				<p className={classes.logo__name}>CoffeeLove</p>
 			</div>
 			<button onClick={menuOpenHandler} className={classes.hamburgerBtn}>
 				{!isOpen && <FontAwesomeIcon icon={faBars} />}

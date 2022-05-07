@@ -1,7 +1,6 @@
 import classes from "./Newsletter.module.scss";
 import "../../scss/typography.scss";
-import NewsletterModal from "../layout/NewsletterModal";
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { NewsletterModalContext } from "../../store/newsletterModal-context";
 
 const Newsletter = ({ onOpenModal }) => {
@@ -19,11 +18,14 @@ const Newsletter = ({ onOpenModal }) => {
 			<section className={classes.Newsletter}>
 				<div className={classes.shadow}></div>
 				<div className={classes.headingContainer}>
-					<h2 className={`${classes.heading} section-heading`}>
+					<h2
+						data-aos='fade-right'
+						className={`${classes.heading} section-heading`}
+					>
 						Sign up to our Newsletter
 					</h2>
 				</div>
-				<div className={classes.group}>
+				<div data-aos='fade-left' className={classes.group}>
 					<input
 						type='email'
 						placeholder='email'

@@ -7,7 +7,7 @@ const GalleryPage = () => {
 	return (
 		<section className={classes.GalleryPage}>
 			<h2 className={`${classes.heading} section-heading`}>Gallery</h2>
-			<Gallery />;
+			<Gallery />
 			<Footer />
 		</section>
 	);
