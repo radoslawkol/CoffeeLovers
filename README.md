@@ -1,7 +1,7 @@
 # Coffee website project
 
 This is cafe website. See project: https://coffeelovers-project.netlify.app <br>
-This page is fully responsive page. It's frontend page. Sending froms is only a visual effect.
+This page is fully responsive. It's frontend page. Sending forms is only a visual effect.
 
 ## Used technology
 
@@ -16,7 +16,7 @@ This page is fully responsive page. It's frontend page. Sending froms is only a 
 ## Story
 
 This is my first serious React project. I'm happy to finish it. I came across different problems connecting with styling and react logic.
-The most difficult part of website was creating Testimonials.js. I struggled with making working abd responsive carousel.
+The most difficult part of website was creating Testimonials.js. I struggled with making working, responsive carousel.
 
 Thanks to this project I practiced the basis of React: useState, useEffect, Context API, Portals and react-router(v6).
 I also refreshed some SCSS knowledge.
