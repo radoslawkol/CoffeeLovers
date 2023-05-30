@@ -1,9 +1,9 @@
 // Testimonials
-import user1 from "./images/reviewers/user-1.jpg";
-import user2 from "./images/reviewers/user-2.jpg";
-import user3 from "./images/reviewers/user-3.jpg";
-import user4 from "./images/reviewers/user-4.jpg";
-import user5 from "./images/reviewers/user-5.jpg";
+import user1 from "./images/reviewers/user-2.jpg";
+import user2 from "./images/reviewers/user-1.jpg";
+import user3 from "./images/reviewers/user-5.jpg";
+import user4 from "./images/reviewers/user-3.jpg";
+import user5 from "./images/reviewers/user-4.jpg";
 
 import {
 	faMugHot,
